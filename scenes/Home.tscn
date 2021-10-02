@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/home_scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://blender/kumputoor.fbx" type="PackedScene" id=2]
 
 [node name="Spatial" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45137, -1.4946, -1.16878 )
@@ -18,3 +19,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99443, -4.26158, -0.329507 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.300406, 0, 0.953811, 0, 1, 0, -0.953811, 0, -0.300406, 9.48894, 2.4891, -0.416081 )
 fov = 96.4
+
+[node name="kumputoor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61296, 2.46374, 0.074648 )
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23171, 2.93252, -0.146624 )
+light_energy = 3.11
+light_indirect_energy = 8.02
+
+[node name="GIProbe" type="GIProbe" parent="."]
+extents = Vector3( 21.346, 13.2032, 10.7741 )
